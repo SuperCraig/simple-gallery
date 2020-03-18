@@ -10,7 +10,7 @@ import com.thesimplycoder.imagegallery.R
 import com.thesimplycoder.imagegallery.helper.GlideApp
 import kotlinx.android.synthetic.main.item_gallery_image.view.*
 
-class GalleryImageAdapter(private val itemList: List<Image>) : RecyclerView.Adapter<GalleryImageAdapter.ViewHolder>() {
+    class GalleryImageAdapter(private val itemList: List<Image>) : RecyclerView.Adapter<GalleryImageAdapter.ViewHolder>() {
 
     private var context: Context? = null
     var listener: GalleryImageClickListener? = null
