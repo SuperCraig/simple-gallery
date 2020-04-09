@@ -16,7 +16,7 @@ import com.thesimplycoder.imagegallery.helper.GlideApp
 import com.thesimplycoder.imagegallery.helper.ZoomOutPageTransformer
 import kotlinx.android.synthetic.main.image_fullscreen.view.*
 
-class GalleryFullscreenFragment : DialogFragment() {
+class GalleryFullscreenFragment : DialogFragment(){
 
     private var imageList = ArrayList<Image>()
     private var selectedPosition: Int = 0
@@ -71,6 +71,7 @@ class GalleryFullscreenFragment : DialogFragment() {
         }
     }
 
+
     // gallery adapter
     inner class GalleryPagerAdapter : PagerAdapter() {
 
@@ -106,3 +107,4 @@ class GalleryFullscreenFragment : DialogFragment() {
         }
     }
 }
+

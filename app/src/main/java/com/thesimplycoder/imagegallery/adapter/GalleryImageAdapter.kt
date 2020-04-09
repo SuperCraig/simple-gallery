@@ -1,6 +1,7 @@
 package com.thesimplycoder.imagegallery.adapter
 
 import android.content.Context
+import android.graphics.Color
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +11,7 @@ import com.thesimplycoder.imagegallery.R
 import com.thesimplycoder.imagegallery.helper.GlideApp
 import kotlinx.android.synthetic.main.item_gallery_image.view.*
 
-    class GalleryImageAdapter(private val itemList: List<Image>) : RecyclerView.Adapter<GalleryImageAdapter.ViewHolder>() {
+class GalleryImageAdapter(private val itemList: List<Image>) : RecyclerView.Adapter<GalleryImageAdapter.ViewHolder>() {
 
     private var context: Context? = null
     var listener: GalleryImageClickListener? = null
@@ -46,6 +47,13 @@ import kotlinx.android.synthetic.main.item_gallery_image.view.*
             // adding click or tap handler for our image layout
             itemView.container.setOnClickListener {
                 listener?.onClick(adapterPosition)
+                if(it.isSelected){
+                    it.setBackgroundResource(R.color.colorPrimary)
+                    it.isSelected = false
+                }else{
+                    it.setBackgroundColor(Color.parseColor("#3547f0"))
+                    it.isSelected = true
+                }
             }
         }
     }
